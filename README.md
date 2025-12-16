@@ -27,7 +27,7 @@ Language: Python
 Version Control: Git & GitHub
 
 📁 Project Structure
-'''
+```bash
 notesapp/
 │── manage.py
 │── requirements.txt
@@ -51,7 +51,7 @@ notesapp/
 │
 ├── media/                # Uploaded notes stored here
 └── static/               # (optional) Custom Static Files
-'''
+```
 
 ▶️ How to Run Locally
 git clone <your repo link>
