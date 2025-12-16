@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes List</title>
+</head>
+<body>
+
+<h2>Available Notes</h2>
+
+<form method="get">
+    Semester:  
+    <input type="text" name="semester">
+    Subject:  
+    <input type="text" name="subject">
+    <button>Search</button>
+</form>
+
+<ul>
+    {% for note in notes %}
+        <li>
+            <b>{{ note.title }}</b>  
+            ({{ note.semester }} - {{ note.subject }})  
+            <a href="{{ note.file.url }}" download>Download</a>
+        </li>
+    {% empty %}
+        <p>No notes found.</p>
+    {% endfor %}
+</ul>
+
+<a href="/upload/">Upload New Note</a>
+
+</body>
+</html>
